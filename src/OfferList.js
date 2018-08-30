@@ -16,6 +16,7 @@ const store = createStore(reducer);
 class OfferList extends Component {
   render() {
     return (
+      
       <Provider store={store}>
         <Layout className="main-div">
           <Header className="title">OFFERS</Header>
