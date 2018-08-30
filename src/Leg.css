@@ -1,0 +1,35 @@
+.itenary-card {
+    margin-top: 10px;
+}
+.flight-itenary {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    color:darkslategrey;
+    background-color:lightgrey;
+    margin: -24px -32px 6px -32px;
+    padding: 4px;
+}
+
+.leg-details {
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+}
+
+.flight-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.airplane-col {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.description-col {
+    padding-top: 2%;
+}
+.single-arrow {
+    padding-top: 3%;
+}

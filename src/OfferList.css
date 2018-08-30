@@ -1,0 +1,54 @@
+@import '~antd/dist/antd.css';
+
+.content{
+  margin: 20px 80px;
+}
+
+.title{
+  color: azure;
+  font-size: 30px;
+}
+
+.load-btn{
+  margin: 2% 45%;
+}
+
+.aircraft{
+  flex: 0.3;
+  justify-content: center;
+  border: 1px solid #646464;
+  text-align: center;
+  margin: 1px;
+}
+
+.airport{
+  flex: 0.5;
+  justify-content: center;
+  border: 1px solid #646464;
+  padding: 5px;
+  margin: 1px;
+}
+
+.offer-request{
+  flex: 0.2;
+  padding-top: 25px;
+  justify-content: center;
+  border: 1px solid #646464;
+  text-align: center;
+  margin: 1px;
+}
+
+.card-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.grey,h2,h3,h4{
+  color: #646464;
+}
+
+.flag-style {
+  border: 1px solid grey;
+  height: 35px;
+}
