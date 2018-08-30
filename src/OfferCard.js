@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col, Card, Button } from 'antd';
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
+
+
 import { selectOffer } from './actions';
 import Details from './Details';
+import { oneWaysMock } from './mocks/quoteMocks';
 
 import NEXT_ARROW from './images/NextArrow.svg';
 
@@ -18,27 +22,41 @@ class OfferCard extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			details: false
+			details: false,
+			redirect: false 
 		}
 	}
+
+
+ 
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
+
+//  <Button type="primary"
+// 					onClick={() => this.setState({ details: !this.state.details })}>
+// 					Show Details Page
+// 				</Button>
+
 	render() {
-		const { oneWays } = this.props;
+		const { selectedOffer } = this.props.selectedOffer;
 		return (
 			<div className="main-div">
-				{/*{!this.state.details && <Button type="primary"
-					onClick={() => this.setState({ details: !this.state.details })}>
+				{!this.state.details && <Button type="primary"
+					onClick={this.setRedirect}>
 					Show Details Page
 				</Button>
-				}*/}
-				{this.state.details && <Details />}
-				{!this.state.details && oneWays.map(oneWay => (
+				}
+				{this.state.redirect && <Redirect to='./PlanAFlight' />}
+				{!this.state.details && oneWaysMock.map(oneWay => (
 					<Card>
 						<div className="card-div">
 							<div className="aircraft">
 								<h2>{oneWay.aircraftTypeId}</h2>
 								<div className="grey">Operated By</div>
 								<div className="grey">{oneWay.operatingCompanyName}</div>
-								{/* <a href="#">View Aircraft Details</a> */}
 							</div>
 							<Row className="airport" type="flex" align="middle">
 								<Col span={3}>From</Col>
