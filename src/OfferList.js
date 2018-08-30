@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Layout, Tabs } from 'antd';
 import { Provider } from 'react-redux';
-// import { createStore } from 'redux';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 
 import OfferCard from './OfferCard';
 import Details from './Details';
@@ -13,7 +18,6 @@ import store from './store'
 
 const { Header, Content } = Layout;
 const TabPane = Tabs.TabPane;
-// const store = createStore(reducer);
 
 class OfferList extends Component {
   render() {

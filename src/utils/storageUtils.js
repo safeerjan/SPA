@@ -8,6 +8,8 @@ const shouldNotEncrypt = process.env.NODE_ENV !== environments.PRODUCTION;
 
 export const loadState = () => {
   const serializedState = localStorage.getItem(STORAGE_KEY);
+
+  console.log("-------------------", serializedState);
   if (serializedState === null) {
     return undefined;
   }
