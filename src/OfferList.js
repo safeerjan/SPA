@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Tabs } from 'antd';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+// import { createStore } from 'redux';
 
 import OfferCard from './OfferCard';
 import Details from './Details';
@@ -9,10 +9,11 @@ import PlanAFlight from './PlanAFlight';
 import { oneWaysMock } from './mocks/quoteMocks';
 import './OfferList.css';
 import reducer from './reducer';
+import store from './store'
 
 const { Header, Content } = Layout;
 const TabPane = Tabs.TabPane;
-const store = createStore(reducer);
+// const store = createStore(reducer);
 
 class OfferList extends Component {
   render() {
