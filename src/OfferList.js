@@ -24,16 +24,7 @@ const TabPane = Tabs.TabPane;
 class OfferList extends Component {
   render() {
     return (
-
       <Provider store={store}>
-        {/*<Router>
-          <Switch>
-            <Route path="/" component={OfferCard} />
-            <Route path="./Details" component={Details} />
-            <Route path="./PlanAFlight" component={PlanAFlight} />
-            <Redirect to="/" />
-          </Switch>
-        </Router>*/}
         <Layout className="main-div">
           <Header className="title">OFFERS</Header>
           <Content className="content">

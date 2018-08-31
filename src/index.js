@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import OfferList from './OfferList';
 import PlanAFlight from './PlanAFlight';
-// import OfferCard from './OfferCard';
 import OfferCardIndex from './OfferCardIndex';
-import Leg from './Leg';
+import LegIndex from './LegIndex';
 import UserCard from './UserCard';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -21,9 +20,8 @@ if(document.getElementById('OfferCardRoot')){
 if(document.getElementById('UserCardRoot')){
     ReactDOM.render(<UserCard />, document.getElementById('UserCardRoot'));
 }
-
-// if(document.getElementById('LegRoot')){
-//     ReactDOM.render(<Leg />, document.getElementById('LegRoot'));
-// }
+if(document.getElementById('LegRoot')){
+    ReactDOM.render(<LegIndex />, document.getElementById('LegRoot'));
+}
 
 registerServiceWorker();

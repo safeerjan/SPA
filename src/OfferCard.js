@@ -35,21 +35,10 @@ class OfferCard extends Component {
     })
   }
 
-//  <Button type="primary"
-// 					onClick={() => this.setState({ details: !this.state.details })}>
-// 					Show Details Page
-// 				</Button>
-
 	render() {
 		const { selectedOffer } = this.props.selectedOffer;
 		return (
 			<div className="main-div">
-				{!this.state.details && <Button type="primary"
-					onClick={this.setRedirect}>
-					Show Details Page
-				</Button>
-				}
-				{this.state.redirect && <Redirect to='./PlanAFlight' />}
 				{!this.state.details && oneWaysMock.map(oneWay => (
 					<Card>
 						<div className="card-div">

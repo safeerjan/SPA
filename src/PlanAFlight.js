@@ -3,25 +3,20 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 import UserCard from './UserCard';
+import "./index.css";
 import "./PlanAFlight.css";
 
 const FormItem = Form.Item;
 
 class PlanAFlight extends React.Component {
 
-
   componentDidMount(){
     this.getDataFromLocalStorage();   
   }
 
-  // syncLocalDataToAppData(){
-  //   setTimeout(() => this.getDataFromLocalStorage(),1000);
-  // }
-
   getDataFromLocalStorage(){
     const data = localStorage.getItem('SelectedOffer');
     const SelectedOfferData = JSON.parse(data)
-    // console.log("-----componentDidMount-------------------------------------",SelectedOfferData);
     if (SelectedOfferData) {
       const aircraftTypeId = SelectedOfferData.selectedOffer.aircraftTypeId;
       const AirportIcao = SelectedOfferData.selectedOffer.AirportIcao;
@@ -42,32 +37,29 @@ class PlanAFlight extends React.Component {
   }
 
   render() {
-    // const { getFieldDecorator } = this.props.form;
     return (
-      <Form onSubmit={this.handleSubmit} className="login-form">
-        <h1><u>Flight Details</u></h1>
-        <h2 id="status"></h2>
-        <span className="labelStyle">Aircraft Type:</span><span id="aircraftTypeId" className="labelDataStyle"></span>
-        <br/>
-        <span className="labelStyle">Airport:</span><span id="AirportIcao" className="labelDataStyle"></span>
-        <br/>
-        <span className="labelStyle">Tail Number:</span><span id="tailNumber" className="labelDataStyle"></span>
-        <br/>
-        <span className="labelStyle">Valid To:</span><span id="validTo" className="labelDataStyle"></span>
-        <br/>        
-        <h2 id="airportName"></h2>
-        <br/>
-        <Button type="primary" htmlType="submit" className="login-form-button btnStyle">
-          CONFIRM
-        </Button>
-        <UserCard/>
-     </Form>
+      <div className="spaH1">
+        <h1 style={{  color: "white", backgroundColor: "gray"}}>Flight Details</h1>
+          <Form onSubmit={this.handleSubmit} className="login-form">
+            <h2 id="status"></h2>
+            <span className="labelStyle">Aircraft Type:</span><span id="aircraftTypeId" className="labelDataStyle"></span>
+            <br/>
+            <span className="labelStyle">Airport:</span><span id="AirportIcao" className="labelDataStyle"></span>
+            <br/>
+            <span className="labelStyle">Tail Number:</span><span id="tailNumber" className="labelDataStyle"></span>
+            <br/>
+            <span className="labelStyle">Valid To:</span><span id="validTo" className="labelDataStyle"></span>
+            <br/>        
+            <h2 id="airportName"></h2>
+            <br/>
+            <Button type="primary" htmlType="submit" className="login-form-button btnStyle">
+              CONFIRM
+            </Button>
+            <UserCard/>
+        </Form>
+      </div>
     );
   }
 }
 
 export default PlanAFlight;
-
-// const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
-
-// ReactDOM.render(<WrappedNormalLoginForm />, mountNode);

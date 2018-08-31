@@ -46,36 +46,10 @@ class Leg extends Component {
                         <small>Operated By</small>
                         <h2> {selectedOffer.operatingCompanyName}</h2>
                     </Col>
-                    {/* <Col lg={18} md={18} xs={24} className="description-col">
-
-                        <div className="flight-description">
-                            <div className="airports">
-                                <div className="image">
-                                    <img src={getFlag(selectedOffer.flag)} className="flag-style" />
-                                </div>
-                                <div className="image">
-                                    Airport Name
-                                </div>
-                            </div>
-                            <div className="single-arrow">
-                                <Icon type="arrow-right" />
-                            </div>
-                            <div className="airports">
-                                <div className="image">
-                                    <img src={japan} alt="logo" className="flags" /> Tokyo
-                                </div>
-                                <div className="image">
-                                    Airport Name
-                                </div>
-                            </div>
-                        </div>
-                    </Col> */}
                 </Row>
             </Card>
-
         );
     }
 }
 const mapStateToProps = (state) => state;
 export default connect(mapStateToProps)(Leg);
-// export default Leg;

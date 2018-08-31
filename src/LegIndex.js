@@ -8,22 +8,21 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import Details from './Details';
-import { oneWaysMock } from './mocks/quoteMocks';
+import Leg from './Leg';
 import './OfferList.css';
 import store from './store'
 
 const { Header, Content } = Layout;
 const TabPane = Tabs.TabPane;
 
-class OfferCardIndex extends Component {
+class LegIndex extends Component {
   render() {
     return (
       <Provider store={store}>
         <Layout className="main-div">
-          <Header className="title">OFFERS LIST</Header>
+          <Header className="title">EMPPTY LEG COMPONENT</Header>
           <Content className="content">
-                <Details/>
+            <Leg />
           </Content>
         </Layout>
       </Provider >
@@ -31,4 +30,4 @@ class OfferCardIndex extends Component {
   }
 }
 
-export default OfferCardIndex;
+export default LegIndex;
