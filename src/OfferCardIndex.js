@@ -23,7 +23,7 @@ class OfferCardIndex extends Component {
         <Layout className="main-div">
           <Header className="title">OFFERS LIST</Header>
           <Content className="content">
-                <Details/>
+            <Details/>
           </Content>
         </Layout>
       </Provider >
