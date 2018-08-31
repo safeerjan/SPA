@@ -21,6 +21,7 @@ if(document.getElementById('OfferCardRoot')){
 if(document.getElementById('UserCardRoot')){
     ReactDOM.render(<UserCard />, document.getElementById('UserCardRoot'));
 }
+
 // if(document.getElementById('LegRoot')){
 //     ReactDOM.render(<Leg />, document.getElementById('LegRoot'));
 // }
