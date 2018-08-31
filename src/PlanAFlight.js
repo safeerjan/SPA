@@ -38,25 +38,25 @@ class PlanAFlight extends React.Component {
 
   render() {
     return (
-      <div className="spaH1">
-        <h1 style={{  color: "white", backgroundColor: "gray"}}>Flight Details</h1>
-          <Form onSubmit={this.handleSubmit} className="login-form">
-            <h2 id="status"></h2>
-            <span className="labelStyle">Aircraft Type:</span><span id="aircraftTypeId" className="labelDataStyle"></span>
-            <br/>
-            <span className="labelStyle">Airport:</span><span id="AirportIcao" className="labelDataStyle"></span>
-            <br/>
-            <span className="labelStyle">Tail Number:</span><span id="tailNumber" className="labelDataStyle"></span>
-            <br/>
-            <span className="labelStyle">Valid To:</span><span id="validTo" className="labelDataStyle"></span>
-            <br/>        
-            <h2 id="airportName"></h2>
-            <br/>
-            <Button type="primary" htmlType="submit" className="login-form-button btnStyle">
-              CONFIRM
-            </Button>
-            <UserCard/>
+      <div style={{padding: 20, backgroundColor: "#E8E8E8"}}>
+        <h1 style={{  color: "white", backgroundColor: "gray"}}>FLIGHT INFO</h1>
+        <Form onSubmit={this.handleSubmit} className="login-form">
+          <h2 id="status"></h2>
+          <span className="labelStyle">Aircraft Type:</span><span id="aircraftTypeId" className="labelDataStyle"></span>
+          <br/>
+          <span className="labelStyle">Airport:</span><span id="AirportIcao" className="labelDataStyle"></span>
+          <br/>
+          <span className="labelStyle">Tail Number:</span><span id="tailNumber" className="labelDataStyle"></span>
+          <br/>
+          <span className="labelStyle">Valid To:</span><span id="validTo" className="labelDataStyle"></span>
+          <br/>        
+          <h2 id="airportName"></h2>
+          <br/>
+          <Button type="primary" htmlType="submit" className="login-form-button btnStyle">
+            CONFIRM
+          </Button>          
         </Form>
+        <UserCard/>
       </div>
     );
   }

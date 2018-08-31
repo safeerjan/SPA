@@ -8,8 +8,8 @@ import LegIndex from './LegIndex';
 import UserCard from './UserCard';
 import registerServiceWorker from './registerServiceWorker';
 
-if(document.getElementById('appRoot')){
-    ReactDOM.render(<OfferList />, document.getElementById('appRoot'));
+if(document.getElementById('AppRoot')){
+    ReactDOM.render(<OfferList />, document.getElementById('AppRoot'));
 }
 if(document.getElementById('PlanAFlightRoot')){
     ReactDOM.render(<PlanAFlight />, document.getElementById('PlanAFlightRoot'));

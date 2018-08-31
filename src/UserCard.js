@@ -10,7 +10,7 @@ class UserCard extends Component {
         return (
             <div className="spaH1">
                 <h1 style={{  color: "white", backgroundColor: "gray"}}>USER SPA</h1>
-                <Card className="itenary-card" style={{margin: 20, padding: 20}}>
+                <Card className="itenary-card" style={{padding: 20}}>
                     <Card
                         style={{ width: 300 }}
                         cover={<img alt="example" src="https://cdn-www.mobify.com/wp-content/uploads/jeff-smith.jpg" />}
