@@ -2,33 +2,38 @@ import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import ReactDOM from 'react-dom';
 import React from 'react';
 
+import UserCard from './UserCard';
 import "./PlanAFlight.css";
 
 const FormItem = Form.Item;
 
 class PlanAFlight extends React.Component {
 
+
   componentDidMount(){
+    this.getDataFromLocalStorage();   
+  }
+
+  // syncLocalDataToAppData(){
+  //   setTimeout(() => this.getDataFromLocalStorage(),1000);
+  // }
+
+  getDataFromLocalStorage(){
     const data = localStorage.getItem('SelectedOffer');
     const SelectedOfferData = JSON.parse(data)
-    console.log("-----componentDidMount-------------------------------------",SelectedOfferData);
-    if (SelectedOfferData  && SelectedOfferData != "undefined" && SelectedOfferData != "null") {
-      // const SelectedAirportName = SelectedOfferData.selectedOffer.AirportIcao;
+    // console.log("-----componentDidMount-------------------------------------",SelectedOfferData);
+    if (SelectedOfferData) {
       const aircraftTypeId = SelectedOfferData.selectedOffer.aircraftTypeId;
       const AirportIcao = SelectedOfferData.selectedOffer.AirportIcao;
       const tailNumber= SelectedOfferData.selectedOffer.tailNumber;
       const validTo = SelectedOfferData.selectedOffer.validTo;
 
-
-     // console.log("--------------FINAL--------", SelectedAirportName)
-    
       document.getElementById('aircraftTypeId').innerHTML = aircraftTypeId;
       document.getElementById('AirportIcao').innerHTML = AirportIcao;
       document.getElementById('tailNumber').innerHTML = tailNumber;
       document.getElementById('validTo').innerHTML = validTo;
     } else
       document.getElementById('status').innerHTML = "Data Not Found!";
-    
   }
 
   handleSubmit = (e) => {
@@ -40,7 +45,7 @@ class PlanAFlight extends React.Component {
     // const { getFieldDecorator } = this.props.form;
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
-        <h1>Flight Details</h1>
+        <h1><u>Flight Details</u></h1>
         <h2 id="status"></h2>
         <span className="labelStyle">Aircraft Type:</span><span id="aircraftTypeId" className="labelDataStyle"></span>
         <br/>
@@ -55,6 +60,7 @@ class PlanAFlight extends React.Component {
         <Button type="primary" htmlType="submit" className="login-form-button btnStyle">
           CONFIRM
         </Button>
+        <UserCard/>
      </Form>
     );
   }

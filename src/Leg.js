@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Card, Icon, Row, Col } from 'antd';
 import moment from 'moment';
+import { connect } from 'react-redux';
+
 // import { Link } from 'react-router-dom';
 import './Leg.css';
 import japan from './Flag_of_Japan.svg';
@@ -74,5 +76,6 @@ class Leg extends Component {
         );
     }
 }
-
-export default Leg;
+const mapStateToProps = (state) => state;
+export default connect(mapStateToProps)(Leg);
+// export default Leg;

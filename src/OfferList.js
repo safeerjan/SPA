@@ -11,6 +11,8 @@ import {
 import OfferCard from './OfferCard';
 import Details from './Details';
 import PlanAFlight from './PlanAFlight';
+import Leg from './Leg';
+import UserCard from './UserCard';
 import { oneWaysMock } from './mocks/quoteMocks';
 import './OfferList.css';
 import reducer from './reducer';
@@ -44,6 +46,12 @@ class OfferList extends Component {
               </TabPane>
               <TabPane tab="Plan" key="3">
                 <PlanAFlight />
+              </TabPane>
+              <TabPane tab="Leg" key="4">
+                <Leg />
+              </TabPane>
+              <TabPane tab="User" key="5">
+                <UserCard />
               </TabPane>
             </Tabs>
           </Content>
