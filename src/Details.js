@@ -15,7 +15,6 @@ class Details extends Component {
 
   render() {
     const { selectedOffer } = this.props;
-    // console.log("-------------DETAIL----------------",selectedOffer);
     const start = moment(selectedOffer.validFrom).format('DD-MMM-YYYY');
     const end = moment(selectedOffer.validTo).format('DD-MMM-YYYY');
     return (
