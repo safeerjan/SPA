@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, Icon, Avatar, Row, Col } from 'antd';
 
-import "./index.css";
+import "./index.css"; 
 
 const { Meta } = Card;
 
